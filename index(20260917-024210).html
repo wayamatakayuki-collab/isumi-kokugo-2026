@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>令和8年度 日本国語教育学会 千葉県支部夷隅地区研究集会</title>
+<style>
+:root{
+  --paper:#f7f3ea;
+  --paper-deep:#f0eadf;
+  --card:#fffdf9;
+  --ink:#252825;
+  --ink-soft:#6b716d;
+  --green:#3f5f52;
+  --green-deep:#2f4d42;
+  --vermillion:#a94c3e;
+  --vermillion-soft:#f4e8e4;
+  --line:#ddd6ca;
+  --line-soft:#ebe5dc;
+  --shadow:0 20px 50px rgba(50,55,52,.08);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  background:
+    radial-gradient(circle at top left,rgba(63,95,82,.045),transparent 34%),
+    linear-gradient(rgba(90,80,70,.024) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(90,80,70,.018) 1px,transparent 1px),
+    var(--paper);
+  background-size:auto,28px 28px,28px 28px,auto;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic","YuGothic",Meiryo,sans-serif;
+  line-height:1.8;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0 auto 0 0;
+  width:5px;
+  background:linear-gradient(180deg,var(--green-deep),var(--vermillion));
+  z-index:20;
+}
+.wrap{max-width:1040px;margin:0 auto;padding:34px 18px 80px}
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:50px 46px 42px;
+  background:rgba(255,253,249,.94);
+  border:1px solid rgba(80,70,60,.12);
+  border-radius:30px;
+  box-shadow:var(--shadow);
+}
+.hero::after{
+  content:"言葉";
+  position:absolute;
+  right:14px;
+  top:-26px;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:140px;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:.04em;
+  color:rgba(63,95,82,.035);
+  pointer-events:none;
+}
+.hero-kicker{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  color:var(--green-deep);
+  font-size:.9rem;
+  font-weight:800;
+  letter-spacing:.06em;
+}
+.hero-kicker::before{
+  content:"";
+  width:38px;height:2px;
+  background:var(--vermillion);
+  border-radius:999px;
+}
+.hero h1{
+  position:relative;
+  margin:16px 0 16px;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:clamp(1.95rem,4.6vw,3.15rem);
+  line-height:1.45;
+  letter-spacing:.025em;
+  font-weight:700;
+}
+.hero-theme{
+  position:relative;
+  max-width:830px;
+  margin-top:18px;
+  padding:17px 20px 16px 22px;
+  border-left:4px solid var(--vermillion);
+  background:linear-gradient(90deg,var(--vermillion-soft),rgba(244,232,228,.55));
+  border-radius:0 16px 16px 0;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:1.05rem;
+  font-weight:700;
+}
+.hero-info{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+  margin-top:26px;
+}
+.info-card{
+  padding:15px 16px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:rgba(255,255,255,.8);
+}
+.info-card .label{
+  display:block;
+  color:var(--green);
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.05em;
+  margin-bottom:3px;
+}
+.deadline{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:18px;
+  padding:9px 14px;
+  border-radius:999px;
+  background:var(--green-deep);
+  color:#fff;
+  font-size:.92rem;
+  font-weight:800;
+}
+
+.card{
+  margin-top:20px;
+  padding:30px;
+  background:rgba(255,253,249,.94);
+  border:1px solid rgba(80,70,60,.12);
+  border-radius:24px;
+  box-shadow:0 10px 30px rgba(45,52,48,.045);
+}
+.section-head{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:22px;
+}
+.section-mark{
+  display:grid;
+  place-items:center;
+  min-width:42px;
+  height:42px;
+  padding:0 10px;
+  border-radius:12px;
+  background:var(--green-deep);
+  color:#fff;
+  font-size:.82rem;
+  font-weight:900;
+}
+.section-head h2{
+  margin:0;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:1.38rem;
+  letter-spacing:.03em;
+}
+.section-head .sub{
+  display:block;
+  margin-top:3px;
+  color:var(--ink-soft);
+  font-family:inherit;
+  font-size:.8rem;
+  font-weight:600;
+  letter-spacing:0;
+}
+
+.overview-row{
+  display:grid;
+  grid-template-columns:110px 1fr;
+  gap:18px;
+  padding:16px 0;
+  border-bottom:1px solid var(--line-soft);
+}
+.overview-row:last-child{border-bottom:0}
+.overview-row b{color:var(--green-deep)}
+
+.program{
+  padding:17px 18px;
+  border:1px solid #e3ded4;
+  border-radius:16px;
+  background:var(--paper-deep);
+  margin-bottom:12px;
+}
+.program strong{
+  display:block;
+  color:var(--green-deep);
+  margin-bottom:4px;
+}
+.workshops{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin-top:14px;
+}
+.workshop{
+  position:relative;
+  padding:18px 18px 17px 56px;
+  border:1px solid #e1dcd2;
+  border-radius:18px;
+  background:#fff;
+}
+.workshop .num{
+  position:absolute;
+  left:16px;
+  top:18px;
+  display:grid;
+  place-items:center;
+  width:28px;height:28px;
+  border-radius:50%;
+  background:var(--green);
+  color:#fff;
+  font-weight:900;
+  font-size:.84rem;
+}
+.workshop b{
+  display:block;
+  line-height:1.55;
+}
+.workshop small{
+  display:block;
+  margin-top:6px;
+  color:var(--ink-soft);
+  line-height:1.55;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:18px;
+}
+.field{margin-bottom:20px}
+label{
+  display:block;
+  margin-bottom:8px;
+  font-weight:800;
+}
+.req{
+  display:inline-block;
+  margin-left:7px;
+  padding:2px 7px;
+  border-radius:6px;
+  background:var(--vermillion);
+  color:#fff;
+  font-size:.68rem;
+  vertical-align:2px;
+}
+input[type="text"],input[type="email"],select{
+  width:100%;
+  min-height:54px;
+  border:1.5px solid #d7d2c8;
+  border-radius:14px;
+  padding:13px 14px;
+  background:#fff;
+  color:var(--ink);
+  font:inherit;
+  outline:none;
+  transition:.18s ease;
+}
+input:focus,select:focus{
+  border-color:var(--green);
+  box-shadow:0 0 0 4px rgba(63,95,82,.09);
+}
+.hint{
+  margin:-4px 0 18px;
+  color:var(--ink-soft);
+  font-size:.92rem;
+}
+
+.priority-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;
+}
+.priority{
+  padding:16px;
+  border:1px solid #e1dcd2;
+  border-radius:18px;
+  background:linear-gradient(180deg,#fff,#fbfaf6);
+}
+.priority-title{
+  display:block;
+  margin-bottom:8px;
+  color:var(--green-deep);
+  font-size:.82rem;
+  font-weight:900;
+}
+.note{
+  margin-top:16px;
+  padding:13px 15px;
+  border-radius:14px;
+  background:#f1f3ef;
+  color:#57615c;
+  font-size:.9rem;
+}
+.choice-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.choice{
+  display:flex;
+  align-items:center;
+  gap:11px;
+  min-height:58px;
+  padding:14px 16px;
+  border:1.5px solid #ddd8cf;
+  border-radius:15px;
+  background:#fff;
+  cursor:pointer;
+}
+.choice input{
+  width:auto;
+  accent-color:var(--green);
+  transform:scale(1.13);
+}
+.error{
+  display:none;
+  color:#a64238;
+  font-size:.84rem;
+  margin-top:7px;
+}
+.submit-card{text-align:center}
+.submit-btn{
+  width:min(100%,440px);
+  padding:17px 22px;
+  border:0;
+  border-radius:15px;
+  background:linear-gradient(135deg,var(--green),var(--green-deep));
+  color:#fff;
+  font:inherit;
+  font-size:1.05rem;
+  font-weight:900;
+  letter-spacing:.02em;
+  cursor:pointer;
+  box-shadow:0 12px 28px rgba(47,77,66,.19);
+}
+.submit-btn:disabled{opacity:.55;cursor:not-allowed}
+.complete{
+  display:none;
+  text-align:center;
+  padding:38px 22px;
+}
+.complete-mark{
+  width:68px;height:68px;
+  margin:0 auto 16px;
+  display:grid;place-items:center;
+  border-radius:50%;
+  background:var(--vermillion-soft);
+  color:var(--vermillion);
+  font-size:30px;
+  font-weight:900;
+}
+.complete h2{
+  margin:0 0 10px;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+}
+.footer{
+  margin-top:28px;
+  text-align:center;
+  color:#7b837e;
+  font-size:.82rem;
+}
+
+@media(max-width:760px){
+  body::before{width:4px}
+  .wrap{padding:15px 10px 48px}
+  .hero{padding:28px 20px 26px;border-radius:22px}
+  .hero::after{font-size:94px;right:-6px;top:-6px}
+  .hero-info,.workshops,.form-grid,.priority-grid,.choice-grid{grid-template-columns:1fr}
+  .card{padding:22px 17px;border-radius:20px}
+  .overview-row{grid-template-columns:1fr;gap:3px}
+  .section-mark{min-width:38px;height:38px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <div class="hero-kicker">令和8年度　日本国語教育学会 千葉県支部</div>
+  <h1>夷隅地区研究集会<br>お申し込みフォーム</h1>
+  <div class="hero-theme">「言葉の力を働かせ、ウェルビーイングを実現する子供の育成」</div>
+
+  <div class="hero-info">
+    <div class="info-card">
+      <span class="label">日時</span>
+      令和9年1月30日（土）<br>13:00～16:30
+    </div>
+    <div class="info-card">
+      <span class="label">会場</span>
+      いすみ市立大原小学校<br>いすみ市大原8530-3
+    </div>
+    <div class="info-card">
+      <span class="label">会費</span>
+      一般 2,000円<br>学生 1,000円
+    </div>
+  </div>
+
+  <div class="deadline">申込締切　令和8年12月18日（金）</div>
+</header>
+
+<section class="card">
+  <div class="section-head">
+    <span class="section-mark">概要</span>
+    <h2>研究集会について<span class="sub">開催概要</span></h2>
+  </div>
+
+  <div class="overview-row"><b>主催</b><div>日本国語教育学会千葉県支部</div></div>
+  <div class="overview-row"><b>共催</b><div>千葉大学国語教育研修会／夷隅地区研究集会実行委員会</div></div>
+  <div class="overview-row"><b>日時</b><div>令和9年1月30日（土）13:00～16:30（受付 12:30～）</div></div>
+  <div class="overview-row"><b>会場</b><div>いすみ市立大原小学校　いすみ市大原8530-3</div></div>
+  <div class="overview-row"><b>主題</b><div>「言葉の力を働かせ、ウェルビーイングを実現する子供の育成」</div></div>
+  <div class="overview-row"><b>会費</b><div>研究集会　一般 2,000円／学生 1,000円<br>懇親会　6,000円程度（JR大原駅周辺）</div></div>
+</section>
+
+<section class="card">
+  <div class="section-head">
+    <span class="section-mark">内容</span>
+    <h2>当日のプログラム<span class="sub">講演・ワークショップ・展望</span></h2>
+  </div>
+
+  <div class="program">
+    <strong>講演</strong>
+    「『言語生活を楽しむこと』を意識したこれからの国語教育のあり方について」<br>
+    森田真吾 先生（千葉大学教育学部教授）
+  </div>
+
+  <div class="workshops">
+    <div class="workshop"><span class="num">1</span><b>やってみよう！リテラチャーサークル ～低学年向け～</b><small>木村由佳 先生（我孫子市立我孫子第一小学校教諭）</small></div>
+    <div class="workshop"><span class="num">2</span><b>協働的に書く学習のすすめ ～「ひとりで書ける」から「一緒に書ける」へ～</b><small>堀口史哲 先生（千葉大学教育学部助教）</small></div>
+    <div class="workshop"><span class="num">3</span><b>VUCA時代を生き抜くために ～問いと対話の学びが拓く地平～</b><small>横田経一郎 先生（植草学園大学発達教育学部教授）</small></div>
+    <div class="workshop"><span class="num">4</span><b>AIが文章を書く時代に人間が書くことの意味 ～「書くこと」領域における小中の接続の視点から～</b><small>牧野太輝 先生（千葉大学教育学部附属中学校教諭）</small></div>
+  </div>
+
+  <div class="program" style="margin-top:14px">
+    <strong>展望</strong>
+    首藤久義 先生（千葉大学教育学部名誉教授）
+  </div>
+</section>
+
+<form id="entryForm" action="https://script.google.com/macros/s/AKfycbxq0nIFGFcGzcKDWpr_0drqSyIwvexZq-AcCHE-GnheY_aIQ7uwSZ5EaFFQwGy0Y6y5/exec" method="POST" target="submitFrame" novalidate>
+  <div id="formArea">
+
+    <section class="card">
+      <div class="section-head">
+        <span class="section-mark">1</span>
+        <h2>基本情報<span class="sub">参加者情報をご入力ください</span></h2>
+      </div>
+
+      <div class="form-grid">
+        <div class="field">
+          <label for="name">お名前<span class="req">必須</span></label>
+          <input id="name" name="name" type="text" autocomplete="name" placeholder="例：山田 太郎" required>
+          <div class="error">お名前を入力してください。</div>
+        </div>
+
+        <div class="field">
+          <label for="affiliation">所属<span class="req">必須</span></label>
+          <input id="affiliation" name="affiliation" type="text" placeholder="例：○○市立○○小学校" required>
+          <div class="error">所属を入力してください。</div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="email">メールアドレス<span class="req">必須</span></label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="example@example.jp" required>
+        <div class="error">正しいメールアドレスを入力してください。</div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <span class="section-mark">2</span>
+        <h2>ワークショップ希望<span class="sub">第1希望から順にお選びください</span></h2>
+      </div>
+
+      <p class="hint">上位で選択した講座は、次の希望欄には表示されません。</p>
+
+      <div class="priority-grid">
+        <div class="priority">
+          <span class="priority-title">第1希望</span>
+          <select id="first" name="first" required></select>
+          <div class="error">第1希望を選択してください。</div>
+        </div>
+
+        <div class="priority">
+          <span class="priority-title">第2希望</span>
+          <select id="second" name="second" required></select>
+          <div class="error">第2希望を選択してください。</div>
+        </div>
+
+        <div class="priority">
+          <span class="priority-title">第3希望</span>
+          <select id="third" name="third" required></select>
+          <div class="error">第3希望を選択してください。</div>
+        </div>
+      </div>
+
+      <div class="note">※会場の都合上、参加人数により御希望に添えない場合があります。御了承ください。</div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <span class="section-mark">3</span>
+        <h2>懇親会<span class="sub">研究集会終了後・JR大原駅周辺</span></h2>
+      </div>
+
+      <div class="choice-grid">
+        <label class="choice"><input type="radio" name="party" value="参加する" required>参加する</label>
+        <label class="choice"><input type="radio" name="party" value="参加しない" required>参加しない</label>
+      </div>
+      <div class="error" id="partyError">いずれかを選択してください。</div>
+    </section>
+
+    <section class="card submit-card">
+      <button id="submitBtn" class="submit-btn" type="submit">この内容で申し込む</button>
+    </section>
+
+  </div>
+
+  <section id="complete" class="card complete">
+    <div class="complete-mark">✓</div>
+    <h2>お申し込みを受け付けました</h2>
+    <p>入力いただいたメールアドレスへ確認メールを送信します。</p>
+    <p style="color:#68716c;font-size:.9rem">※メールが届かない場合は、迷惑メールフォルダも御確認ください。</p>
+  </section>
+</form>
+
+<iframe name="submitFrame" id="submitFrame" style="display:none"></iframe>
+
+<div class="footer">
+  入力された情報は、本研究集会の参加受付・連絡・運営のために使用します。
+</div>
+
+</div>
+
+<script>
+const WORKSHOPS=[
+  {value:'1',label:'① リテラチャーサークル'},
+  {value:'2',label:'② 協働的に書く学習'},
+  {value:'3',label:'③ 問いと対話の学び'},
+  {value:'4',label:'④ AI時代に人間が書く意味'}
+];
+
+const form=document.getElementById('entryForm');
+const first=document.getElementById('first');
+const second=document.getElementById('second');
+const third=document.getElementById('third');
+const frame=document.getElementById('submitFrame');
+const submitBtn=document.getElementById('submitBtn');
+let submitted=false;
+
+function renderSelect(select,excluded,keep=''){
+  const current=keep||select.value||'';
+  select.innerHTML='';
+
+  const placeholder=document.createElement('option');
+  placeholder.value='';
+  placeholder.textContent='選択してください';
+  select.appendChild(placeholder);
+
+  WORKSHOPS.forEach(w=>{
+    if(excluded.includes(w.value))return;
+    const option=document.createElement('option');
+    option.value=w.value;
+    option.textContent=w.label;
+    select.appendChild(option);
+  });
+
+  if([...select.options].some(o=>o.value===current)){
+    select.value=current;
+  }
+}
+
+renderSelect(first,[]);
+renderSelect(second,[]);
+renderSelect(third,[]);
+
+first.addEventListener('change',()=>{
+  renderSelect(second,[first.value].filter(Boolean),second.value);
+  renderSelect(third,[first.value,second.value].filter(Boolean),third.value);
+});
+
+second.addEventListener('change',()=>{
+  renderSelect(third,[first.value,second.value].filter(Boolean),third.value);
+});
+
+function validateForm(){
+  let ok=true;
+
+  document.querySelectorAll('input[required]:not([type="radio"]),select[required]').forEach(el=>{
+    const valid=el.checkValidity();
+    const error=el.parentElement.querySelector('.error');
+    if(error)error.style.display=valid?'none':'block';
+    if(!valid)ok=false;
+  });
+
+  const party=document.querySelector('input[name="party"]:checked');
+  document.getElementById('partyError').style.display=party?'none':'block';
+  if(!party)ok=false;
+
+  const choices=[first.value,second.value,third.value].filter(Boolean);
+  if(choices.length===3 && new Set(choices).size!==3)ok=false;
+
+  return ok;
+}
+
+form.addEventListener('submit',e=>{
+  if(form.action.includes('PASTE_YOUR_GAS')){
+    e.preventDefault();
+    alert('GASのウェブアプリURLを設定してください。');
+    return;
+  }
+
+  if(!validateForm()){
+    e.preventDefault();
+    const err=[...document.querySelectorAll('.error')].find(el=>el.style.display==='block');
+    if(err)err.scrollIntoView({behavior:'smooth',block:'center'});
+    return;
+  }
+
+  submitted=true;
+  submitBtn.disabled=true;
+  submitBtn.textContent='送信しています…';
+});
+
+frame.addEventListener('load',()=>{
+  if(!submitted)return;
+  document.getElementById('formArea').style.display='none';
+  document.getElementById('complete').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>
